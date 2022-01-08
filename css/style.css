@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+:root {
+    --dark-color: #000000;
+    --light-color: #f4f4f4;
+}
+
+/* General */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+#menu {
+    display: none;
+    font-size: 46px;
+    color: var(--light-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Button */
+button {
+    background-color: transparent;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;    
+    font-weight: bold;
+}
+
+/* Background Image */
+.background-img {
+    background-image: url("../img/background.jpg");
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar, button, .cars h2 {
+    font-family: 'Montserrat Bold', sans-serif;
+}
+
+.services h1, .hero h1 {
+    font-family: 'Montserrat Black', sans-serif;
+    font-size: 3rem;
+}
+
+p {
+    font-family: 'Montserrat Regular', sans-serif;
+}
+
+/* Navbar */
+.navbar {    
+    height: 80px;
+    background-color: rgba(0, 2, 3, 0.8);
+    font-size: 15px;
+}
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--light-color);
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar ul a:hover {
+    border-bottom: var(--light-color) solid;
+}
+
+.navbar a {
+    font-size: 1.25rem;
+}
+
+/* Hero */
+
+.hero {
+    background-color: rgba(0, 2, 3, 0.65);
+    color: var(--light-color);
+   }
+
+.hero .container {
+    text-align: center;   
+}
+
+
+.hero p {
+    padding: 40px 0;
+    font-size: 1.2rem;
+}
+
+.hero button {
+    color: var(--light-color);
+    border: var(--light-color)  3px solid;
+}
+
+.hero button:hover {
+    background-color: var(--light-color);
+    color: #000;
+    cursor: pointer;
+}
+
+/* Services */
+
+.services h1 {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.services .flex {
+    justify-content: space-between;
+}
+
+.cards {
+    padding-bottom: 200px;
+}
+
+.card {
+    padding: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 210px;
+    border: #000 3px solid;
+}
+
+.card h2, p {
+    padding: 20px 0;
+}
+
+.card button {
+    border: var(--dark-color) 3px solid;
+}
+
+.card button:hover {
+    cursor: pointer;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: var(--dark-color) 3px solid;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #000;
+}
+
+.fab {
+    font-size: 30px;
+}
+
+.fa-instagram {
+    color: #C13584;
+}
+
+.fa-linkedin {
+    color: #0072b1;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.footer p {
+    color: var(--light-color);
+}
+
+.footer .flex {
+    justify-content: space-between;
+}
+
+i {
+    padding: 10px;
+}
+
+i:hover {
+    transform: scale(1.08);
+}
+
+@media only screen and (max-width: 720px){
+    .cards .flex {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 560px){
+    .container {
+       padding: 0 15px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    #menu {
+        display: inline-block;
+    }
+
+    .services h1, .hero h1 {        
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    .footer .flex {
+        flex-direction: column;
+    }
+
+    .social-media {
+        padding-top: 10px;
+    }
+}
