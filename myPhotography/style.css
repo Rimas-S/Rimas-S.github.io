@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+    max-width: 920px;
+    margin: auto;
+    box-shadow: 5px 5px 60px 30px rgb(204, 203, 203);
+}
+
+.flex {
+    display: flex;
+    height: 100%;
+}
+
+#main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 12px;
+    flex: 0 1 40vw;
+}
+
+#main-text h1 {
+    font-size: 32px;
+}
+
+#btn-main {
+    margin-top: 40px;
+    padding: 20px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    border: 1px solid #c5c5c5;
+}
+
+#btn-main:not(:hover){
+    background-color: #fff;
+}
+
+#main-photo {
+    background: url("img/photo_main.jpg") no-repeat center;    
+    height: 100vh;
+    background-size: cover;
+    flex: 0 1 60vw;
+}
+
+.header {
+    background-color: rgb(29, 29, 29);
+    text-align: center;
+    padding: 25px;
+}
+
+.header h4 {
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    padding: 0 15px;
+    border-right: dotted 1.5px #fff;
+    border-left: dotted 1.5px #fff;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.photo-detail {
+    text-align: center;
+    padding: 5px;
+}
+
+.photo-detail p {
+    padding: 8px;
+
+}
+
+.photo-title {
+    font-size: 18px;
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    margin: 50px;
+    padding: 20px;
+}
+
+footer h1 {
+    padding: 20px;
+    font-size: 40px;
+}
+
+footer p {
+    padding-bottom: 20px;
+    font-size: 17px;
+}
+
+i {
+    font-size: 50px;
+    color: rgb(250, 67, 35, 0.7);
+}
+
+i:hover {    
+    color: tomato;
+}
+
+#scroll-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    #btn-main {
+        padding: 10px 35px;        
+  }
+}
+
+@media only screen and (max-width: 500px) {    
+  .flex {
+      flex-direction: column;      
+  }
+  #main-text {    
+    flex: 0 1 50vh;
+    }
+
+    #main-photo {
+       flex: 0 1 50vh;
+    }
+}
