@@ -1,0 +1,115 @@
+// Homepage Animation
+
+svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+
+svg:hover #man {
+    transform-origin: top;
+    transform-box: fill-box;
+    animation: swingMan 3s linear infinite ;
+}
+
+svg:hover #woman {
+    transform-origin: top;
+    transform-box: fill-box;
+    animation: swingWoman 3s linear infinite ;
+}
+
+
+@keyframes swingMan {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    
+}
+@keyframes swingWoman {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    
+}
+
+// Menu animation
+
+@keyframes menu {
+    from {
+       opacity: 0;
+       transform: translateY(-10px)
+    }
+    to {
+       opacity: 1;
+       transform: translateY(0)
+    }      
+ }
+
+//  Blos Animation
+
+@keyframes navColor {
+    25% {
+        fill:rgb(228, 248, 163);
+    }    
+    50% {
+        fill:red;
+    }
+    
+    80% {
+        fill: green;
+    }        
+}
+
+@keyframes mainBoard {
+    25% {
+        transform: translate(-20px, -10px);
+    }
+    50% {
+        transform: translate(0, -20px);
+    }
+    75% {
+        transform: translate(20px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes leftLetter {
+    20% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes middleLetter {
+    0%, 20%, 35%, 45% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-25px);
+    }
+    27% {
+        transform: translateY(-15px);
+    }
+    40% {
+        transform: translateY(-8px);
+    }    
+}
+
+//

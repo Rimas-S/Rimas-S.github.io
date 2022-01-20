@@ -1,0 +1,331 @@
+@import "general";
+@import "variables";
+@import "animation";
+
+
+li {   
+   list-style-type: none;
+}
+img {
+   width: 100%;
+   display: block;
+}
+
+.btn {
+   background-color: transparent;
+   margin: 15px 0;
+   border: none;
+   font-size: 1rem;
+   cursor: pointer;
+}
+
+.header {
+   background-color: $darkColor;
+   color: #fff;
+   padding: 1.2rem 0;
+
+   .header__logo {
+      font-size: 2rem;
+   }
+}
+
+.header .flex {
+   justify-content: space-between;
+}
+
+.menubar {
+   display: none;
+}
+
+.menu__item {
+   padding: 3px 0;
+   font-size: 1.2rem;
+}
+
+.menu__item:not(:last-child) {
+   margin-right: 15px; 
+}
+
+.menu__item:hover{
+   cursor: pointer;
+   border-bottom: #fff solid 2px;
+}
+
+
+.showcase {
+  margin: 5rem 0;
+
+  &__text {     
+     padding-left:5px;
+     padding-right: 25px;
+  }
+  h2 {
+     padding: 8px 0;
+  }
+  p {
+     font-size: 1.1rem;
+  }
+}
+
+.showcase.grid {
+   grid-template-columns: 1fr 1fr;
+  }
+
+.card.flex {
+     justify-content: space-around;
+     flex-wrap: wrap;
+     gap: 15px;
+}
+
+.card {
+   padding-top: 40px;
+   margin-bottom: 200px;
+
+   &__item {
+      margin-top: 20px;
+      background-color: $lightColor;
+      text-align: center;
+      width: 220px;
+      border: $darkBorder;      
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   }
+
+   h3 {
+      margin-top: 20px;
+      padding: 10px 0;
+     }
+
+   p {
+      margin-bottom: 30px;
+   }
+
+   .btn--card {
+      margin-bottom: 30px;
+   }
+
+   .btn--card:hover {
+      color: $secondaryColor;
+      font-weight: 550;
+   }
+}
+
+.boxes.flex {
+   gap: 40px;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.boxes {
+   border: $darkBorder;
+   padding: 30px;
+   margin-bottom: 100px;
+
+   &__item {
+      height: 60px;
+      width: 80px;
+      border: $darkBorder;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+   }
+}
+
+.info.grid {
+grid-template-columns: minmax(400px, 1fr) minmax(400px, 2fr);
+gap: 20px;
+}
+
+.info {
+   margin-bottom: 50px;
+
+   &__text {
+   line-height: 1.5;
+   }
+
+   .btn--info:hover {
+      color: red;
+   }
+
+}
+
+.message.flex {
+   flex-direction: column;
+}
+
+.message {
+   max-width: 600px;
+   margin: auto;
+   margin-bottom: 50px;
+   padding: 20px 5px;
+
+   input[type=text], textarea {
+      padding: 5px 2px;
+      margin: 8px 0;
+      font-size: 1.2rem;
+      width: 100%;
+   }
+
+   #message {
+      height: 200px;
+   }
+
+   input[type=submit] {
+      font-size: 1.5rem;
+      padding: 6px 40px;
+      margin: 20px 0;
+      align-self: flex-end;
+      cursor: pointer;
+   }
+
+}
+
+footer {
+   margin-top: 50px;
+   padding: 20px;
+   background-color: $darkColor;
+}
+
+footer .flex {
+   flex-direction: row;
+   justify-content: space-between; 
+   align-items: center;
+}
+
+footer p {
+   font-size: 20px;
+   color: #fff;
+   padding: 10px 5px;
+}
+
+footer a {
+   font-size: 40px;
+   margin: 0 4px;
+}
+
+.fa-instagram {
+   color: $instagramColor;
+}
+
+.fa-linkedin {
+   color: $linedinColor;
+}
+
+.fa-github {
+   color: $githubColor;
+}
+
+@media only screen and (max-width: 850px) {
+   .info.grid {     
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));      
+      }
+ }
+
+ @media only screen and (max-width: 700px) {
+   
+   .showcase.grid {      
+      grid-template-columns: 80%;         
+      justify-content: center;
+      row-gap: 50px;
+      }
+ }
+
+ @media only screen and (max-width: 500px) {
+
+   .showcase.grid {      
+      grid-template-columns: 100%;      
+      }
+
+   p {      
+      line-height: 1.2rem;
+   }
+
+   .info.grid {     
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));      
+      }
+      
+   .menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      right: 0;
+      background-color: $darkColor;
+      padding-left: 1rem;
+      padding-bottom: 5px;
+                  
+      li {
+         padding: 5px 0;
+      }
+   }
+
+   .test:hover .menu {      
+      display: flex;
+      animation: menu 1s ease;
+   }
+
+   i {
+      font-size: 2rem;
+      cursor: pointer;
+   }
+
+   .menubar {
+      display: block;
+      margin: auto;
+   } 
+   
+   footer .flex {
+      flex-direction: column;
+      justify-content: space-between; 
+      align-items: center;
+   }
+ }
+
+
+
+//  Blogs
+
+.blog-svg {
+  margin-top: 50px;  
+  text-align: center;
+}
+.blog-svg svg {
+   width: 70%;
+}
+
+#s-redColor, #s-greenColor, #s-yellowColor {
+   fill: #fff;
+}
+
+svg:hover #s-mainBoard {   
+   animation: mainBoard 3s linear alternate infinite;   
+}
+
+svg:hover #s-leftLetter {
+   transform-origin: center;
+   transform-box: fill-box;
+   animation: leftLetter 6s ease-in-out infinite;   
+}
+svg:hover #s-middleLetter {   
+   animation: middleLetter 3.5s linear infinite;   
+}
+
+svg:hover #s-redColor {   
+   animation: navColor 2s infinite;
+}
+svg:hover  #s-greenColor {   
+   animation: navColor 4s infinite;
+}
+svg:hover #s-yellowColor {   
+   animation: navColor 6s infinite;   
+}
+
+// Blog main
+
+.blog-article {
+   padding-top: 100px;
+
+   p {
+      line-height: 1.5rem;
+   }
+}
+
+
+

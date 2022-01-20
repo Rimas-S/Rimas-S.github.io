@@ -1,0 +1,426 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+svg:hover #man {
+  transform-origin: top;
+  transform-box: fill-box;
+  animation: swingMan 3s linear infinite;
+}
+
+svg:hover #woman {
+  transform-origin: top;
+  transform-box: fill-box;
+  animation: swingWoman 3s linear infinite;
+}
+
+@keyframes swingMan {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+}
+@keyframes swingWoman {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes menu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes navColor {
+  25% {
+    fill: #e4f8a3;
+  }
+  50% {
+    fill: red;
+  }
+  80% {
+    fill: green;
+  }
+}
+@keyframes mainBoard {
+  25% {
+    transform: translate(-20px, -10px);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  75% {
+    transform: translate(20px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes leftLetter {
+  20% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes middleLetter {
+  0%, 20%, 35%, 45% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-25px);
+  }
+  27% {
+    transform: translateY(-15px);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+}
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.btn {
+  background-color: transparent;
+  margin: 15px 0;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.header {
+  background-color: #292828;
+  color: #fff;
+  padding: 1.2rem 0;
+}
+.header .header__logo {
+  font-size: 2rem;
+}
+
+.header .flex {
+  justify-content: space-between;
+}
+
+.menubar {
+  display: none;
+}
+
+.menu__item {
+  padding: 3px 0;
+  font-size: 1.2rem;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.menu__item:hover {
+  cursor: pointer;
+  border-bottom: #fff solid 2px;
+}
+
+.showcase {
+  margin: 5rem 0;
+}
+.showcase__text {
+  padding-left: 5px;
+  padding-right: 25px;
+}
+.showcase h2 {
+  padding: 8px 0;
+}
+.showcase p {
+  font-size: 1.1rem;
+}
+
+.showcase.grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.card.flex {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  padding-top: 40px;
+  margin-bottom: 200px;
+}
+.card__item {
+  margin-top: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  width: 220px;
+  border: #292828 solid 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card h3 {
+  margin-top: 20px;
+  padding: 10px 0;
+}
+.card p {
+  margin-bottom: 30px;
+}
+.card .btn--card {
+  margin-bottom: 30px;
+}
+.card .btn--card:hover {
+  color: #006400;
+  font-weight: 550;
+}
+
+.boxes.flex {
+  gap: 40px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.boxes {
+  border: #292828 solid 2px;
+  padding: 30px;
+  margin-bottom: 100px;
+}
+.boxes__item {
+  height: 60px;
+  width: 80px;
+  border: #292828 solid 2px;
+  box-shadow: #26394d 0px 20px 30px -10px;
+}
+
+.info.grid {
+  grid-template-columns: minmax(400px, 1fr) minmax(400px, 2fr);
+  gap: 20px;
+}
+
+.info {
+  margin-bottom: 50px;
+}
+.info__text {
+  line-height: 1.5;
+}
+.info .btn--info:hover {
+  color: red;
+}
+
+.message.flex {
+  flex-direction: column;
+}
+
+.message {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 20px 5px;
+}
+.message input[type=text], .message textarea {
+  padding: 5px 2px;
+  margin: 8px 0;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.message #message {
+  height: 200px;
+}
+.message input[type=submit] {
+  font-size: 1.5rem;
+  padding: 6px 40px;
+  margin: 20px 0;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #292828;
+}
+
+footer .flex {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 5px;
+}
+
+footer a {
+  font-size: 40px;
+  margin: 0 4px;
+}
+
+.fa-instagram {
+  color: #E1306C;
+}
+
+.fa-linkedin {
+  color: #2867B2;
+}
+
+.fa-github {
+  color: #6e5494;
+}
+
+@media only screen and (max-width: 850px) {
+  .info.grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+@media only screen and (max-width: 700px) {
+  .showcase.grid {
+    grid-template-columns: 80%;
+    justify-content: center;
+    row-gap: 50px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .showcase.grid {
+    grid-template-columns: 100%;
+  }
+
+  p {
+    line-height: 1.2rem;
+  }
+
+  .info.grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    right: 0;
+    background-color: #292828;
+    padding-left: 1rem;
+    padding-bottom: 5px;
+  }
+  .menu li {
+    padding: 5px 0;
+  }
+
+  .test:hover .menu {
+    display: flex;
+    animation: menu 1s ease;
+  }
+
+  i {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .menubar {
+    display: block;
+    margin: auto;
+  }
+
+  footer .flex {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.blog-svg {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.blog-svg svg {
+  width: 70%;
+}
+
+#s-redColor, #s-greenColor, #s-yellowColor {
+  fill: #fff;
+}
+
+svg:hover #s-mainBoard {
+  animation: mainBoard 3s linear alternate infinite;
+}
+
+svg:hover #s-leftLetter {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: leftLetter 6s ease-in-out infinite;
+}
+
+svg:hover #s-middleLetter {
+  animation: middleLetter 3.5s linear infinite;
+}
+
+svg:hover #s-redColor {
+  animation: navColor 2s infinite;
+}
+
+svg:hover #s-greenColor {
+  animation: navColor 4s infinite;
+}
+
+svg:hover #s-yellowColor {
+  animation: navColor 6s infinite;
+}
+
+.blog-article {
+  padding-top: 100px;
+}
+.blog-article p {
+  line-height: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
